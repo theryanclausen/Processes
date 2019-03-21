@@ -10,7 +10,24 @@
 
 int main(void)
 {
-    // Your code here    
+    pid_t pid = fork();
+    if(pid < 0)
+    {
+        perror("Fork spooned.");
+        exit(1);
+    }
+    else if (pid == 0)
+    {
+        printf("child pre exec\n");
+        char* args[] = {"/bin/ls", NULL};
+        execv(args[0], args);
+        printf("post execv\n");
+    }
+    else
+    {
+        printf("Parent\n");
+    }
+       
 
     return 0;
 }
