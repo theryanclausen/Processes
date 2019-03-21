@@ -10,16 +10,18 @@ int main(void)
 {
     FILE *tx;
 
-    tx = fopen("text.txt", "r");
+    tx = fopen("text.txt", "w");
 
     int frk = fork();
 
     if (frk == 0)
     {
-        fprint("");
+        fprintf(tx, "child\n");
     }
-
-    // Your code here
+    else
+    {
+        fprintf(tx," parent\n");
+    }
 
     return 0;
 }
