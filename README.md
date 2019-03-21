@@ -4,7 +4,7 @@ Now that we've talked a bit about how processes and system calls work at a high 
 
 ## Objective
 To introduce and familiarize yourself with some basic system calls pertaining to process 
-creation, to spawn some new processes, and to practice writing more C!
+creation, to spawn some new processes, and to practice writing more C! 
 
 ## `fork()`
 The `fork()` system call is used by a parent process to create a new child process. Its 
